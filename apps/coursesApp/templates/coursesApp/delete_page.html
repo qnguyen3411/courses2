@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css integrity=sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO crossorigin=anonymous>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body class="text-center">
+
+    <h1>DELETE COURSE id {{course.id}}</h1>
+    <h3>U SURE?</h3>
+    <h6>Course name: {{course.name}}</h6>
+    <h6>Course description: {{course.description.content}}</h6>
+    <form action="/">
+        <input type="submit" value="NO" class="col-3 form-control bg-success text-white mx-auto">
+    </form>
+
+    <form action="/delete/{{course.id}}">
+        <input type="submit" value="YEA" class="col-3 form-control bg-danger text-white mx-auto">
+    </form>
+</body>
+</html>
